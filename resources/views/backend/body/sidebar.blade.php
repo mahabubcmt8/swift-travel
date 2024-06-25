@@ -36,7 +36,7 @@
          </a>
       </li>
       {{-- <li class="nav-item">
-         <a href="#" class="nav-link 
+         <a href="#" class="nav-link
              {{(request()->route()->getName()=='category.create')?'active':''}}
              {{(request()->route()->getName()=='property.index')?'active':''}}
              {{(request()->route()->getName()=='category.edit')?'active':''}}
@@ -77,8 +77,8 @@
          </a>
          <ul class="nav nav-treeview">
            <li class="nav-item">
-             <a href="{{ route('property.index') }}" class="nav-link 
-            
+             <a href="{{ route('property.index') }}" class="nav-link
+
              ">
                <i class="far fa-circle nav-icon"></i>
                <p>My Properties</p>
@@ -117,7 +117,7 @@
         </ul>
       </li>
        <li class="nav-item">
-         <a href="#" class="nav-link 
+         <a href="#" class="nav-link
              {{(request()->route()->getName()=='location.country.create')?'active':''}}
              {{(request()->route()->getName()=='location.country.edit')?'active':''}}
              {{(request()->route()->getName()=='location.country.index')?'active':''}}
@@ -141,24 +141,24 @@
          </a>
          <ul class="nav nav-treeview">
            <li class="nav-item">
-             <a href="{{ route('location.country.index') }}" class="nav-link 
-            
+             <a href="{{ route('location.country.index') }}" class="nav-link
+
              ">
                <i class="far fa-circle nav-icon"></i>
                <p>Manage Country</p>
              </a>
            </li>
           <li class="nav-item">
-             <a href="{{ route('location.state.index') }}" class="nav-link 
-            
+             <a href="{{ route('location.state.index') }}" class="nav-link
+
              ">
                <i class="far fa-circle nav-icon"></i>
                <p>Manage State</p>
              </a>
            </li>
            <li class="nav-item">
-             <a href="{{ route('location.city.index') }}" class="nav-link 
-            
+             <a href="{{ route('location.city.index') }}" class="nav-link
+
              ">
                <i class="far fa-circle nav-icon"></i>
                <p>Manage City</p>
@@ -167,7 +167,7 @@
         </ul>
       </li> --}}
       <li class="nav-item">
-         <a href="#" class="nav-link 
+         <a href="#" class="nav-link
          {{(request()->route()->getName()=='general.setting')?'active':''}}
          ">
          <i class="fa-solid fa-gear"></i>
@@ -183,10 +183,16 @@
                <p>General Setting</p>
              </a>
            </li>
+           <li class="nav-item">
+            <a href="{{ route('change.password') }}" class="nav-link {{(request()->route()->getName()=='change.password')?'active':''}}">
+              <i class="far fa-circle nav-icon"></i>
+              <p>Change Password</p>
+            </a>
+          </li>
          </ul>
       </li>
       <li class="nav-item">
-         <a href="#" class="nav-link 
+         <a href="#" class="nav-link
              {{(request()->route()->getName()=='category.create')?'active':''}}
              {{(request()->route()->getName()=='category.index')?'active':''}}
              {{(request()->route()->getName()=='category.edit')?'active':''}}
@@ -200,8 +206,8 @@
          </a>
          <ul class="nav nav-treeview">
            <li class="nav-item">
-             <a href="{{ route('category.index') }}" class="nav-link 
-            
+             <a href="{{ route('category.index') }}" class="nav-link
+
              ">
                <i class="far fa-circle nav-icon"></i>
                <p>Manage Category</p>
@@ -216,7 +222,7 @@
         </ul>
       </li>
        <li class="nav-item">
-         <a href="#" class="nav-link 
+         <a href="#" class="nav-link
              {{(request()->route()->getName()=='section.create')?'active':''}}
              {{(request()->route()->getName()=='section.index')?'active':''}}
              {{(request()->route()->getName()=='section.edit')?'active':''}}
@@ -230,8 +236,8 @@
          </a>
          <ul class="nav nav-treeview">
            <li class="nav-item">
-             <a href="{{ route('section.index') }}" class="nav-link 
-            
+             <a href="{{ route('section.index') }}" class="nav-link
+
              ">
                <i class="far fa-circle nav-icon"></i>
                <p>Manage Section</p>
@@ -246,7 +252,7 @@
         </ul>
       </li>
       <li class="nav-item">
-         <a href="#" class="nav-link 
+         <a href="#" class="nav-link
              {{(request()->route()->getName()=='about.create')?'active':''}}
              {{(request()->route()->getName()=='about.index')?'active':''}}
              {{(request()->route()->getName()=='about.edit')?'active':''}}
@@ -260,8 +266,8 @@
          </a>
          <ul class="nav nav-treeview">
            <li class="nav-item">
-             <a href="{{ route('about.index') }}" class="nav-link 
-            
+             <a href="{{ route('about.index') }}" class="nav-link
+
              ">
                <i class="far fa-circle nav-icon"></i>
                <p>Manage About</p>
@@ -270,7 +276,7 @@
         </ul>
       </li>
       <li class="nav-item">
-        <a href="#" class="nav-link 
+        <a href="#" class="nav-link
             {{(request()->route()->getName()=='tour.create')?'active':''}}
             {{(request()->route()->getName()=='tour.index')?'active':''}}
             {{(request()->route()->getName()=='tour.edit')?'active':''}}
@@ -284,8 +290,8 @@
         </a>
         <ul class="nav nav-treeview">
           <li class="nav-item">
-            <a href="{{ route('tour.index') }}" class="nav-link 
-           
+            <a href="{{ route('tour.index') }}" class="nav-link
+
             ">
               <i class="far fa-circle nav-icon"></i>
               <p>Manage Tours</p>
@@ -294,7 +300,7 @@
        </ul>
      </li>
    <li class="nav-item">
-    <a href="#" class="nav-link 
+    <a href="#" class="nav-link
         {{(request()->route()->getName()=='video.create')?'active':''}}
         {{(request()->route()->getName()=='video.index')?'active':''}}
         {{(request()->route()->getName()=='video.edit')?'active':''}}
@@ -308,8 +314,8 @@
     </a>
     <ul class="nav nav-treeview">
       <li class="nav-item">
-        <a href="{{ route('video.index') }}" class="nav-link 
-       
+        <a href="{{ route('video.index') }}" class="nav-link
+
         ">
           <i class="far fa-circle nav-icon"></i>
           <p>Manage Videos</p>
@@ -318,7 +324,7 @@
    </ul>
  </li>
       {{-- <li class="nav-item">
-         <a href="#" class="nav-link 
+         <a href="#" class="nav-link
              {{(request()->route()->getName()=='service.create')?'active':''}}
              {{(request()->route()->getName()=='service.index')?'active':''}}
              {{(request()->route()->getName()=='service.edit')?'active':''}}
@@ -332,8 +338,8 @@
          </a>
          <ul class="nav nav-treeview">
            <li class="nav-item">
-             <a href="{{ route('service.index') }}" class="nav-link 
-            
+             <a href="{{ route('service.index') }}" class="nav-link
+
              ">
                <i class="far fa-circle nav-icon"></i>
                <p>Manage Services</p>
@@ -348,7 +354,7 @@
         </ul>
       </li> --}}
       {{-- <li class="nav-item">
-         <a href="#" class="nav-link 
+         <a href="#" class="nav-link
              {{(request()->route()->getName()=='agent.create')?'active':''}}
              {{(request()->route()->getName()=='agent.index')?'active':''}}
              {{(request()->route()->getName()=='agent.edit')?'active':''}}
@@ -362,8 +368,8 @@
          </a>
          <ul class="nav nav-treeview">
            <li class="nav-item">
-             <a href="{{ route('agent.index') }}" class="nav-link 
-            
+             <a href="{{ route('agent.index') }}" class="nav-link
+
              ">
                <i class="far fa-circle nav-icon"></i>
                <p>Manage Director</p>
@@ -378,7 +384,7 @@
         </ul>
       </li> --}}
       <li class="nav-item">
-         <a href="#" class="nav-link 
+         <a href="#" class="nav-link
              {{(request()->route()->getName()=='testimonial.create')?'active':''}}
              {{(request()->route()->getName()=='testimonial.index')?'active':''}}
              {{(request()->route()->getName()=='testimonial.edit')?'active':''}}
@@ -392,8 +398,8 @@
          </a>
          <ul class="nav nav-treeview">
            <li class="nav-item">
-             <a href="{{ route('testimonial.index') }}" class="nav-link 
-            
+             <a href="{{ route('testimonial.index') }}" class="nav-link
+
              ">
                <i class="far fa-circle nav-icon"></i>
                <p>Manage Testimonial</p>
@@ -408,7 +414,7 @@
         </ul>
       </li>
       <li class="nav-item">
-         <a href="#" class="nav-link 
+         <a href="#" class="nav-link
              {{(request()->route()->getName()=='slider.create')?'active':''}}
              {{(request()->route()->getName()=='slider.index')?'active':''}}
              {{(request()->route()->getName()=='slider.edit')?'active':''}}
@@ -422,8 +428,8 @@
          </a>
          <ul class="nav nav-treeview">
            <li class="nav-item">
-             <a href="{{ route('slider.index') }}" class="nav-link 
-            
+             <a href="{{ route('slider.index') }}" class="nav-link
+
              ">
                <i class="far fa-circle nav-icon"></i>
                <p>Manage Slider</p>
@@ -438,7 +444,7 @@
          </ul>
       </li>
       <li class="nav-item">
-         <a href="#" class="nav-link 
+         <a href="#" class="nav-link
              {{(request()->route()->getName()=='brand.create')?'active':''}}
              {{(request()->route()->getName()=='brand.index')?'active':''}}
              {{(request()->route()->getName()=='brand.edit')?'active':''}}
@@ -452,8 +458,8 @@
          </a>
          <ul class="nav nav-treeview">
            <li class="nav-item">
-             <a href="{{ route('brand.index') }}" class="nav-link 
-            
+             <a href="{{ route('brand.index') }}" class="nav-link
+
              ">
                <i class="far fa-circle nav-icon"></i>
                <p>Manage Brand</p>
@@ -468,7 +474,7 @@
          </ul>
       </li>
       <li class="nav-item">
-         <a href="#" class="nav-link 
+         <a href="#" class="nav-link
              {{(request()->route()->getName()=='counter.create')?'active':''}}
              {{(request()->route()->getName()=='counter.index')?'active':''}}
              {{(request()->route()->getName()=='counter.edit')?'active':''}}
@@ -482,8 +488,8 @@
          </a>
          <ul class="nav nav-treeview">
            <li class="nav-item">
-             <a href="{{ route('counter.index') }}" class="nav-link 
-            
+             <a href="{{ route('counter.index') }}" class="nav-link
+
              ">
                <i class="far fa-circle nav-icon"></i>
                <p>Manage Counter</p>
@@ -498,7 +504,7 @@
          </ul>
       </li>
       <li class="nav-item">
-         <a href="#" class="nav-link 
+         <a href="#" class="nav-link
              {{(request()->route()->getName()=='blog.create')?'active':''}}
              {{(request()->route()->getName()=='blog.index')?'active':''}}
              {{(request()->route()->getName()=='blog.edit')?'active':''}}
@@ -518,8 +524,8 @@
          </a>
          <ul class="nav nav-treeview">
            <li class="nav-item">
-             <a href="{{ route('blog.index') }}" class="nav-link 
-            
+             <a href="{{ route('blog.index') }}" class="nav-link
+
              ">
                <i class="far fa-circle nav-icon"></i>
                <p>Manage Blog</p>
@@ -532,8 +538,8 @@
              </a>
            </li>
            <li class="nav-item">
-             <a href="{{ route('blog.category.index') }}" class="nav-link 
-            
+             <a href="{{ route('blog.category.index') }}" class="nav-link
+
              ">
                <i class="far fa-circle nav-icon"></i>
                <p>Manage Blog Category</p>
@@ -548,7 +554,7 @@
          </ul>
       </li>
       <li class="nav-item">
-         <a href="#" class="nav-link 
+         <a href="#" class="nav-link
            {{(request()->route()->getName()=='pages.create')?'active':''}}
              {{(request()->route()->getName()=='pages.index')?'active':''}}
              {{(request()->route()->getName()=='pages.edit')?'active':''}}
@@ -562,8 +568,8 @@
          </a>
          <ul class="nav nav-treeview">
            <li class="nav-item">
-             <a href="{{ route('pages.index') }}" class="nav-link 
-            
+             <a href="{{ route('pages.index') }}" class="nav-link
+
              ">
                <i class="far fa-circle nav-icon"></i>
                <p>Manage Pages</p>

@@ -71,6 +71,8 @@ Route::group(['middleware'=>['auth:sanctum', 'verified']], function(){
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
     Route::get('/logout', [AdminController::class, 'AminLogout'])->name('admin.logout');
     Route::get('/general-setting', [SettingController::class, 'index'])->name('general.setting');
+    Route::get('/change-password', [SettingController::class, 'change_password'])->name('change.password');
+    Route::post('/change-password', [SettingController::class, 'update_password'])->name('update.password');
     Route::post('/update', [SettingController::class, 'update'])->name('update.setting');
 });
 

@@ -5,8 +5,12 @@ namespace App\Http\Controllers\Backend;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Setting;
+use App\Models\User;
+use Illuminate\Support\Facades\Validator;
 use Session;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use Image;
 
 class SettingController extends Controller
@@ -18,9 +22,44 @@ class SettingController extends Controller
      */
     public function index()
     {
-        
+
         $settings = Setting::find(1);
         return view('backend.admin.setting.general_setting',compact('settings'));
+    }
+
+    public function change_password(){
+        return view('backend.admin.setting.change_password');
+    }
+
+    public function update_password(Request $request){
+        $validator = Validator::make($request->all(), [
+            'password' => [
+                'required',
+                function ($attribute, $value, $fail) {
+                    if (!Hash::check($value, Auth::user()->password)) {
+                        $fail('The current password is incorrect.');
+                    }
+                },
+            ],
+            'new_password' => 'required',
+        ]);
+
+
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator)->withInput();
+        }else{
+            $user = User::findorFail(Auth::user()->id);
+            $user->password = Hash::make($request->new_password);
+            $user->show_password = $request->new_password;
+            $user->save();
+        }
+
+        $notification = array(
+            'message' => 'Password Changed Successfull.',
+            'alert-type' => 'success'
+        );
+
+        return redirect()->back()->with($notification);
     }
 
     /**
@@ -100,7 +139,7 @@ class SettingController extends Controller
                     unlink($setting->value);
                 }
             } catch (Exception $e) {
-                
+
             }
             $setting->value = $save_url_logo;
 
@@ -120,7 +159,7 @@ class SettingController extends Controller
                     unlink($setting->value);
                 }
             } catch (Exception $e) {
-                
+
             }
             $setting->value = $save_url_footer_logo;
 
@@ -133,34 +172,34 @@ class SettingController extends Controller
             $favicon_save = time().$favicon->getClientOriginalName();
             $favicon->move('upload/setting/favicon/',$favicon_save);
             $save_url_favicon = 'upload/setting/favicon/'.$favicon_save;
-            
+
             $setting = Setting::where('name', 'site_favicon')->first();
             try {
                 if(file_exists($setting->value)){
                     unlink($setting->value);
                 }
             } catch (Exception $e) {
-                
+
             }
             $setting->value = $save_url_favicon;
 
             $setting->save();
         }
-        
+
         //Setting Contact Update
         if ($request->file('site_contact_logo')) {
             $favicon = $request->file('site_contact_logo');
             $favicon_save = time().$favicon->getClientOriginalName();
             $favicon->move('upload/setting/contact/',$favicon_save);
             $save_url_favicon = 'upload/setting/contact/'.$favicon_save;
-            
+
             $setting = Setting::where('name', 'site_contact_logo')->first();
             try {
                 if(file_exists($setting->value)){
                     unlink($setting->value);
                 }
             } catch (Exception $e) {
-                
+
             }
             $setting->value = $save_url_favicon;
 
@@ -168,7 +207,7 @@ class SettingController extends Controller
         }
 
         $notification = array(
-            'message' => 'Setting Updated Successfull.', 
+            'message' => 'Setting Updated Successfull.',
             'alert-type' => 'success'
         );
 
