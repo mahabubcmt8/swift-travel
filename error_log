@@ -1,0 +1,15 @@
+[16-May-2024 04:10:12 UTC] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.1.0". You are running 7.4.33. in /home/swift654global/public_html/vendor/composer/platform_check.php on line 24
+[16-May-2024 04:10:13 UTC] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.1.0". You are running 7.4.33. in /home/swift654global/public_html/vendor/composer/platform_check.php on line 24
+[16-May-2024 04:10:18 UTC] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.1.0". You are running 7.4.33. in /home/swift654global/public_html/vendor/composer/platform_check.php on line 24
+[16-May-2024 04:10:28 UTC] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.1.0". You are running 7.4.33. in /home/swift654global/public_html/vendor/composer/platform_check.php on line 24
+[16-May-2024 04:11:42 UTC] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.1.0". You are running 7.4.33. in /home/swift654global/public_html/vendor/composer/platform_check.php on line 24
+[04-Jun-2024 04:32:39 UTC] PHP Warning:  require_once(/home/swiftt34ravels/public_html/public/index.php): Failed to open stream: No such file or directory in /home/swiftt34ravels/public_html/server.php on line 21
+[04-Jun-2024 04:32:39 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/swiftt34ravels/public_html/public/index.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/swiftt34ravels/public_html/server.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/swiftt34ravels/public_html/server.php on line 21
+[04-Jun-2024 15:20:57 UTC] PHP Warning:  require_once(/home/swiftt34ravels/public_html/public/index.php): Failed to open stream: No such file or directory in /home/swiftt34ravels/public_html/server.php on line 21
+[04-Jun-2024 15:20:57 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/swiftt34ravels/public_html/public/index.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/swiftt34ravels/public_html/server.php:21
+Stack trace:
+#0 {main}
+  thrown in /home/swiftt34ravels/public_html/server.php on line 21
